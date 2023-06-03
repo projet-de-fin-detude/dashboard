@@ -1,0 +1,57 @@
+<div class="row no-gutters h-100">
+  <div class="col-md-2 dashboardBack">
+    <ul class="nav flex-column no-wrap">
+      <li class="nav-item mb-5 mt-3">
+        <a href="/" class="d-flex align-items-center justify-content-center">
+          <img src="../../../assets/img/logo.svg" alt="" class="mr-2">
+          <span class="f20 deep_grey fw_700 ">PharmaElchifaa</span>
+        </a>
+      </li>
+      <li class="nav-item mb-3">
+        <a class="nav-link " [routerLink]="['/analytics']" routerLinkActive="router-link-active">
+          <div class="elementor-icon mr-2">
+            <i aria-hidden="true" class="melawell-icon- melawell-icon-percentage-circle"></i>
+          </div>
+          <span class="latoRegular"> Analytique</span>
+        </a>
+      </li>
+      <li class="nav-item mb-3">
+        <a class="nav-link latoRegular" [routerLink]="['/clients']" routerLinkActive="router-link-active">
+          <div class="elementor-icon mr-2">
+            <i aria-hidden="true" class="melawell-icon- melawell-icon-user"></i>
+          </div>
+          <span>Utilsateurs</span>
+        </a>
+      </li>
+      <!-- <li><a >Clients</a></li> -->
+      <li class="nav-item mb-3">
+        <a class="nav-link latoRegular" [routerLink]="['/orders']" routerLinkActive="router-link-active">
+          <div class="elementor-icon mr-2">
+            <i aria-hidden="true" class="melawell-icon- melawell-icon-cosmeceutical"></i>
+          </div>
+          <span>Commandes</span>
+        </a>
+      </li>
+      <li class="nav-item mb-3">
+        <a class="nav-link latoRegular" [routerLink]="['/medecines']"routerLinkActive="router-link-active">
+          <div class="elementor-icon mr-2">
+            <i aria-hidden="true" class="melawell-icon- melawell-icon-health-security"></i>
+          </div>
+        <span>Médicaments</span>
+        </a>
+      </li>
+      <li class="nav-item mb-3">
+        <a class="nav-link latoRegular" [routerLink]="['/categories']"
+          routerLinkActive="router-link-active">
+          <div class="elementor-icon mr-2">
+            <i aria-hidden="true" class="melawell-icon- melawell-icon-thermometer"></i>
+          </div>
+        <span>Catégories</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-10">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,1 +1,215 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: latoBlack;
+  src: url(assets/fonts/Lato-Black.ttf);
+}
+@font-face {
+  font-family: melawell_icon;
+  src: url(assets/fonts/melawell-icon.woff2);
+}
+@font-face {
+  font-family: latoBold;
+  src: url(assets/fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+  font-family: latoMeduim;
+  src: url(assets/fonts/Lato-Medium.ttf);
+}
+
+@font-face {
+  font-family: latoRegular;
+  src: url(assets/fonts/Lato-Regular.ttf);
+}
+.melawell_icon {
+  font-family: melawell_icon;
+}
+.latoBlack {
+  font-family: latoBlack;
+}
+
+.latoBold {
+  font-family: latoBold;
+}
+
+.latoMeduim {
+  font-family: latoMeduim;
+}
+
+.latoRegular {
+  font-family: latoRegular;
+}
+
+.f12 {
+  font-size: 12px;
+}
+
+.f14 {
+  font-size: 14px;
+}
+.f15 {
+  font-size: 15px;
+}
+.f18 {
+  font-size: 18px;
+}
+
+.f17 {
+  font-size: 17px;
+}
+
+.f20 {
+  font-size: 20px;
+}
+
+.f32 {
+  font-size: 32px;
+}
+
+.f38 {
+  font-size: 38px;
+}
+.f28 {
+  font-size: 28px;
+}
+
+.f24 {
+  font-size: 24px;
+}
+
+.f42 {
+  font-size: 42px;
+}
+
+.no-wrap {
+  flex-wrap: nowrap !important;
+}
+
+.dashboardBack {
+  background-color: #EFEDFF;
+}
+
+.searchBox {
+  background: #fff;
+  height: 40px;
+  border-radius: 40px;
+
+}
+
+html,
+body {
+  height: 100%;
+}
+
+tr {
+  border-bottom: 1px solid #e8e8e8;
+  /* text-align: center; */
+}
+
+td {
+  vertical-align: middle !important;
+  padding: 20px 0.5rem !important;
+}
+.img_item {
+  width: 80px;
+  height: 100%;
+}
+.modal-content {
+  box-shadow: 0px 3px 20px #3762F61A;
+  border-radius: 25px;
+  opacity: 1;
+  border: 1px solid transparent !important;
+
+}
+.primary_btn,
+.primary_btn:hover,
+.primary_btn:active,
+.primary_btn:focus {
+  background-color: #0f62f9 !important;
+  color: #e8e8e8 !important;
+  padding: 13px 42px;
+  font-family: 'latoMeduim';
+}
+.primary_btn_out,
+.primary_btn_out:hover,
+.primary_btn_out:active,
+.primary_btn_out:focus {
+  background-color: #fff !important;
+  color: #0f62f9 !important;
+  border: 1px solid;
+  padding: 13px 42px;
+  font-family: 'latoMeduim';
+}
+
+input {
+  width: 100%;
+  border: 0;
+  height: 50px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  padding-left: 25px;
+  background-color: transparent;
+  border: 1px solid #bbbbbb;
+  outline: none;
+  color: #101010;
+  font-family: "latoMeduim";
+}
+input,select {
+  height: 58px !important;
+}
+.br15 {
+  border-radius: 15px;
+}
+.close_btn {
+  width: 26px;
+  height: 26px;
+  background: #DF0429 0% 0% no-repeat padding-box;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    width: 10px;
+    height: 10px;
+  }
+}
+/* ****************************************************************Icons**************************************************************** */
+
+.melawell-icon-health-security:before {
+  content: "\e02a";
+}
+.melawell-icon-user:before {
+  content: "\e058";
+}
+.melawell-icon-percentage-circle:before {
+  content: "\e041";
+}
+.melawell-icon-thermometer:before {
+  content: "\e055";
+}
+.melawell-icon-cosmeceutical:before {
+  content: "\e018";
+}
+.elementor-icon {
+  /* color: #0f62f9;
+  border-color: #0f62f9; */
+  display: inline-block;
+  line-height: 1;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  font-size: 20px;
+  text-align: center;
+}
+[class*=melawell-icon-] {
+  font-family: melawell_icon;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 1;
+  vertical-align: middle;
+}

@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="d-flex justify-content-between align-items-center">
+    <div class=" f38 latoBold black">
+      <button class="btn p-0" [routerLink]="['/']">
+        <img src="../../../assets/img/Icon-arrow.svg" alt="">
+      </button>
+      Les utilisateurs
+    </div>
+  </div>
+  <div class="pt-5">
+    <div class="table-responsive" *ngIf="clients?.length>0;else no_clients">
+      <table class="table table-borderless">
+        <thead class="text-uppercase latoBlack f16 black_2">
+          <tr>
+            <th class="text-center">ID</th>
+            <th class="text-center">NOM</th>
+            <th class="text-center">PRENOM</th>
+            <th class="text-center">N° TELEPHONE</th>
+            <th class="text-center">ADRESSE</th>
+            <th class="text-center">EMAIL</th>
+            <th class="text-center">ROLE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let client of clients">
+            <td class="latoMeduim f15 black text-center"> {{client.id}} </td>
+            <td class="latoMeduim f15 black text-center">{{client.family_name	}}</td>
+            <td class="latoMeduim f15 black text-center">{{client.name	}}</td>
+            <td class="latoMeduim f15 black text-center">{{client.phone_number}}</td>
+            <td class="latoMeduim f15 black text-center">{{client.address}} </td>
+            <td class="latoMeduim f15 black text-center">{{client.email}} </td>
+            <td class="latoMeduim f15 black text-center">{{client.role_id===1?"Admin":"Client"}} </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <ng-template #no_clients>
+    <div class="container my-5">
+      <div class="d-flex justify-content-center align-items-center mt-5 flex-column">
+        <div class="py-5 empty_cart w-100 text-center">
+          <p class="grey primaryFont f14">Vous n'avez pas encore des clients. </p>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

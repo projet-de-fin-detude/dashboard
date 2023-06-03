@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="d-flex justify-content-between align-items-center">
+    <div class=" f38 latoBold black">
+      <button class="btn p-0" [routerLink]="['/']">
+        <img src="../../../assets/img/Icon-arrow.svg" alt="">
+      </button>
+      La gestion des catégories
+    </div>
+    <button class="btn primary_btn br15 my-4 f14" type="button" (click)="add_category()">
+      Ajouter une catégorie
+    </button>
+  </div>
+  <div class="pt-5">
+    <div class="table-responsive" *ngIf="categories?.length>0;else no_categories">
+      <table class="table table-borderless">
+        <thead class="text-uppercase latoBlack f16 black_2">
+          <tr>
+            <th class="text-center">ID</th>
+            <th class="text-center">TITRE</th>
+            <th class="text-center">OPTIONS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of categories">
+            <td class="latoMeduim f15 black text-center"> {{product.id}} </td>
+            <td class="latoMeduim f15 black text-center">{{product.title}}</td>
+            <td class="latoMeduim f15 black text-center">
+              <button class="btn p-0" (click)="showChildModal(product)">
+                <img src="../../../assets/img/Settings.svg" alt="">
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <ng-template #no_categories>
+    <div class="container my-5">
+      <div class="d-flex justify-content-center align-items-center mt-5 flex-column">
+        <div class="py-5 empty_cart w-100 text-center">
+          <p class="grey primaryFont f14">Vous n'avez pas encore des produits appuyez sur le botton "Ajouter une catégorie"
+            pour insérer votre premier produit . </p>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>
+<div bsModal #childModal="bs-modal" class="modal fade" tabindex="-1" role="dialog"
+aria-labelledby="dialog-child-name">
+<div class="modal-dialog modal-lg">
+  <div class="modal-content px-1 py-2">
+    <div class="d-flex justify-content-end">
+      <button class="btn p-0" (click)="hideChildModal()">
+        <div class="close_btn">
+          <img src="../../../assets/img/x_white.svg" alt="">
+        </div>
+      </button>
+    </div>
+    <div class="px-5">
+      <div class="d-flex justify-content-between py-4 align-items-center">
+        <span class="f24 latoBold black">{{edit?"Modifier la catégorie":"Ajouter une catégorie"}} </span>
+        <div>
+          <button class="btn primary_btn br15  f14 mr-2" (click)="manage_category()">Sauvegarder</button>
+          <button class="btn primary_btn_out br15  f14 " *ngIf="category"
+            (click)="delete_product()">Supprimer</button>
+        </div>
+      </div>
+      <form [formGroup]="category_form">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- <span class="f18 bold black">Information</span> -->
+            <div class="mt-4">
+              <div class="form-group">
+                <label for="title" class="primaryFont f16 black">Titre *</label>
+                <input type="title" class="form-control primaryFont f16" id="title"
+                  [ngClass]="{'is-invalid': submit&&f['title'].errors}" formControlName="title">
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

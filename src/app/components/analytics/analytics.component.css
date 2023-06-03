@@ -1,0 +1,20 @@
+.orders{
+  box-shadow: 0px 1px 4px #3762F633;
+  border-radius: 10px;
+  opacity: 1;
+}
+.users{
+  background-color: #0f62f9 !important;
+  border-radius: 10px;
+
+}
+.medecines{
+  background-color: #DF0429 !important;
+  border-radius: 10px;
+
+}
+.categories{
+  background-color: #FEBF00 !important;
+  border-radius: 10px;
+
+}

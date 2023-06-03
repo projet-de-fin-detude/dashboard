@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="d-flex justify-content-between align-items-center">
+    <div class=" f38 latoBold black">
+      <button class="btn p-0" [routerLink]="['/']">
+        <img src="../../../assets/img/Icon-arrow.svg" alt="">
+      </button>
+      Analytiques
+    </div>
+  </div>
+  <div class="row my-5">
+    <div class="col-md-3">
+      <div class="d-flex flex-column orders p-3">
+        <span class="latoMeduim f18 ">Commandes</span>
+        <span class="latoBlack f32 ">{{analytics?.categories.length}}</span>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="d-flex flex-column users p-3 text-white">
+        <span class="latoMeduim f18 ">Utilisateurs</span>
+        <span class="latoBlack f32 ">{{analytics?.users.length}}</span>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="d-flex flex-column medecines p-3 text-white">
+        <span class="latoMeduim f18 ">Médicaments</span>
+        <span class="latoBlack f32 ">{{analytics?.products.length}}</span>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="d-flex flex-column categories p-3 text-white">
+        <span class="latoMeduim f18 ">Catégories</span>
+        <span class="latoBlack f32 ">{{analytics?.users.length}}</span>
+      </div>
+    </div>
+  </div>
+</div>

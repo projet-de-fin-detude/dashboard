@@ -1,0 +1,8 @@
+
+a{
+  color: #000 !important;
+  text-decoration: none !important;
+}
+.router-link-active, .router-link-active .elementor-icon{
+  color:#0f62f9 !important;
+}
