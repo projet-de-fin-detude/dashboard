@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/services/http.service';
 
 @Component({
@@ -7,15 +7,30 @@ import { HttpService } from 'src/app/services/http.service';
   styleUrls: ['./orders.component.css']
 })
 export class OrdersComponent implements OnInit {
-orders:any
-  constructor(private http:HttpService) { }
+  orders: any
+  constructor(private http: HttpService) { }
   isCollapsed = true;
 
   ngOnInit(): void {
-    this.http.get("orders").subscribe((data)=>{
-      if(data.status===200){
-        this.orders=data.body
+    this.http.get("orders").subscribe((data) => {
+      if (data.status === 200) {
+        this.orders = data.body
       }
     })
+  }
+  onChange(event: any, order: any) {
+    let form = {
+      status: event,
+      id: order.id
+    }
+    this.http.post("edit_order", form).subscribe((data) => {
+      if (data?.status === 200) {
+        Object.assign(order, data.body)
+        console.log('====================================');
+        console.log(data.body);
+        console.log('====================================');
+      }
+    })
+
   }
 }

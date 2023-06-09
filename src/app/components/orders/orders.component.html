@@ -17,6 +17,8 @@
             <th class="text-center">UTILISATEUR</th>
             <th class="text-center">DEVIS</th>
             <th class="text-center">ADRESSE</th>
+            <th class="text-center">STATUT</th>
+            <th class="text-center">ORDONANNCE</th>
           </tr>
         </thead>
         <tbody>
@@ -26,6 +28,35 @@
             <td class="latoMeduim f15 black text-center">{{product.user.name}} {{product.user.family_name}}</td>
             <td class="latoMeduim f15 black text-center">{{product.amount}} DZ</td>
             <td class="latoMeduim f15 black text-center">{{product.address}}</td>
+            <td class="latoMeduim f15 black text-center text-capitalize">
+              <ng-select appearance="outline" [searchable]="false" [clearable]="false" labelForId="heroId"
+                [(ngModel)]="product.status" class="ngselect latoBold f12 pb-1 ng-select"
+                (change)="onChange($event,product)">
+                <ng-option value="en-attente" translate>
+                  En attente
+                </ng-option>
+                <ng-option value="accepté" translate>
+                  Accepté
+                </ng-option>
+                <ng-option value="refusé" translate>
+                  Refusé
+                </ng-option>
+                <ng-option value="en-livraison" translate>
+                  En livraison
+                </ng-option>
+                <ng-option value="livré" translate>
+                  Livré
+                </ng-option>
+              </ng-select>
+            </td>
+            <td class="text-center">
+              <a *ngIf="product.prescription_path"
+                href="http://127.0.0.1:8000/uploads/products/{{product.prescription_path}}" download target="_blank">
+                <div class="elementor-icon">
+                  <i aria-hidden="true" class="melawell-icon- melawell-icon-download"></i>
+                </div>
+              </a>
+            </td>
             <!-- <td class="latoMeduim f15 black text-center">
               <button class="btn p-0" (click)="showChildModal(product)">
                 <img src="../../../assets/img/Settings.svg" alt="">

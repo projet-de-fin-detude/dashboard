@@ -1,12 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
 @font-face {
   font-family: latoBlack;
   src: url(assets/fonts/Lato-Black.ttf);
 }
+
 @font-face {
   font-family: melawell_icon;
   src: url(assets/fonts/melawell-icon.woff2);
 }
+
 @font-face {
   font-family: latoBold;
   src: url(assets/fonts/Lato-Bold.ttf);
@@ -21,9 +25,11 @@
   font-family: latoRegular;
   src: url(assets/fonts/Lato-Regular.ttf);
 }
+
 .melawell_icon {
   font-family: melawell_icon;
 }
+
 .latoBlack {
   font-family: latoBlack;
 }
@@ -47,9 +53,11 @@
 .f14 {
   font-size: 14px;
 }
+
 .f15 {
   font-size: 15px;
 }
+
 .f18 {
   font-size: 18px;
 }
@@ -69,6 +77,7 @@
 .f38 {
   font-size: 38px;
 }
+
 .f28 {
   font-size: 28px;
 }
@@ -110,10 +119,12 @@ td {
   vertical-align: middle !important;
   padding: 20px 0.5rem !important;
 }
+
 .img_item {
   width: 80px;
   height: 100%;
 }
+
 .modal-content {
   box-shadow: 0px 3px 20px #3762F61A;
   border-radius: 25px;
@@ -121,6 +132,7 @@ td {
   border: 1px solid transparent !important;
 
 }
+
 .primary_btn,
 .primary_btn:hover,
 .primary_btn:active,
@@ -130,6 +142,7 @@ td {
   padding: 13px 42px;
   font-family: 'latoMeduim';
 }
+
 .primary_btn_out,
 .primary_btn_out:hover,
 .primary_btn_out:active,
@@ -154,12 +167,16 @@ input {
   color: #101010;
   font-family: "latoMeduim";
 }
-input,select {
+
+input,
+select {
   height: 58px !important;
 }
+
 .br15 {
   border-radius: 15px;
 }
+
 .close_btn {
   width: 26px;
   height: 26px;
@@ -174,23 +191,33 @@ input,select {
     height: 10px;
   }
 }
+
 /* ****************************************************************Icons**************************************************************** */
 
 .melawell-icon-health-security:before {
   content: "\e02a";
 }
+
 .melawell-icon-user:before {
   content: "\e058";
 }
+
 .melawell-icon-percentage-circle:before {
   content: "\e041";
 }
+
 .melawell-icon-thermometer:before {
   content: "\e055";
 }
+
 .melawell-icon-cosmeceutical:before {
   content: "\e018";
 }
+
+.melawell-icon-download:before {
+  content: "\e02d";
+}
+
 .elementor-icon {
   /* color: #0f62f9;
   border-color: #0f62f9; */
@@ -202,6 +229,7 @@ input,select {
   font-size: 20px;
   text-align: center;
 }
+
 [class*=melawell-icon-] {
   font-family: melawell_icon;
   -webkit-font-smoothing: antialiased;
